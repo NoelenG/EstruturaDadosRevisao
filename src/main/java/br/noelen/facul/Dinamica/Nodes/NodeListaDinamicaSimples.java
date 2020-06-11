@@ -9,7 +9,7 @@ public class NodeListaDinamicaSimples {
         pessoa = new Pessoa(nome);
         this.next = null;
     }
-
+   
     public NodeListaDinamicaSimples getNext() {
         return next;
     }
