@@ -8,8 +8,10 @@ public class AppPilha {
         stack.push(2);
         stack.push(3);
 
-        while (!stack.isEmpty()) {
+        /*while (!stack.isEmpty()) {
             System.out.println(stack.pop());
-        }
+        }*/
+        System.out.println(stack.mostrarMenor());
+
     }
 }

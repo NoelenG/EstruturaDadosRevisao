@@ -43,7 +43,7 @@ public class ListaDinamicaSimples {
     }
     //sem last
     public void addEnd(String name){
-        NodeListaDinamicaSimples novoNo = new NodeListaDinamicaSimples(nome);
+        NodeListaDinamicaSimples novoNo = new NodeListaDinamicaSimples(name);
         if(estaVazio()){
             first = novoNo;
         }else{

@@ -37,4 +37,19 @@ public class Pilha {
         top--;
         return value;
     }
+
+    public int mostrarMenor(){
+        if(isEmpty()){
+            return -1;
+        }else{
+	        int menor = data[0];
+	        for (int i = 0; i< data.length; i++){
+			    if (menor > data[i]){
+			    	menor = data[i];
+			    }
+		    }
+	        return menor;
+        }
+    }
 }
+
