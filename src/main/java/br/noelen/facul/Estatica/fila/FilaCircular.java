@@ -7,12 +7,12 @@ public class FilaCircular {
     private int qtd;
     private int tam;
     private int fim;
-    private int primeiro;
+    private int inicio;
 
     public FilaCircular(int max){
         this.tam = max;
         f = new int[tam];
-        fim = primeiro = qtd = 0;
+        fim = inicio = qtd = 0;
     }
 
     public boolean estaCheia(){
@@ -37,10 +37,11 @@ public class FilaCircular {
             int aux = f[inicio];
             qtd--;
             inicio--;
-
+            return aux;
         }else{
             inicio = 0;
+            return aux;
         }
-        return aux;
+        
     }
 }
