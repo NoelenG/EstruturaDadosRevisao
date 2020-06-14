@@ -1,6 +1,7 @@
 package br.noelen.facul.Dinamica;
 
 import br.noelen.facul.Dinamica.Nodes.NodeListaDinamicaSimples;
+import br.noelen.facul.Dinamica.pilha.No;
 
 public class ListaDinamicaSimples {
     private NodeListaDinamicaSimples first;
@@ -15,6 +16,7 @@ public class ListaDinamicaSimples {
         }
         return false;
     }
+
     public void addInicio(String nome) {
         NodeListaDinamicaSimples novoNo = new NodeListaDinamicaSimples(nome);
         if(estaVazio()){
@@ -35,6 +37,21 @@ public class ListaDinamicaSimples {
         }else{
             last.setNext(novoNo);
             last = novoNo;
+            
+        }
+    
+    }
+    //sem last
+    public void addEnd(String name){
+        NodeListaDinamicaSimples novoNo = new NodeListaDinamicaSimples(nome);
+        if(estaVazio()){
+            first = novoNo;
+        }else{
+            NodeListaDinamicaSimples aux = first;
+            while(aux.getNext() != null){
+                aux =aux.getNext();
+            }
+            aux.setNext(novoNo);
         }
     }
     public NodeListaDinamicaSimples removerInicio(){
@@ -63,6 +80,25 @@ public class ListaDinamicaSimples {
             return removed;
         }
     }
+    //sem last
+    public NodeListaDinamicaSimples removerEnd(){
+        if(estaVazio()){
+            return null;
+        }
+        NodeListaDinamicaSimples aux = first;
+        NodeListaDinamicaSimples previous = null;
+        while(aux.getNext() != null){
+            previous = aux;
+            aux = aux.getNext();
+        }
+        if(previous == null){
+            first = null;
+        }else{
+            previous.setNext(null);
+        }
+        return aux;
+    }
+
     public String mostrarTodos(){
         if(estaVazio()){
             return "";

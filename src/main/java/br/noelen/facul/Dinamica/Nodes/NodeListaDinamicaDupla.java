@@ -10,7 +10,10 @@ public class NodeListaDinamicaDupla {
         pessoa = new Pessoa(nome);
         previous = next = null;
     }
-   
+   /*public void setElemento(String nome){
+        pessoa = new Pessoa(nome);
+        this.elemento = elemento;
+    }*/
     public NodeListaDinamicaDupla getNext() {
         return next;
     }
@@ -30,5 +33,6 @@ public class NodeListaDinamicaDupla {
     public void setPrevious(NodeListaDinamicaDupla no) {
         this.previous = no;
     }
+    
     
 }
